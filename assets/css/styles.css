@@ -12,7 +12,7 @@ html, body {
     
 }
 
-/**/
+/*Sets the header styles*/
 header {
     background-color:rgba(24, 24, 24, 0.9) ;
     height: 80px;
@@ -24,7 +24,7 @@ header {
     flex: 0;       
 }
 
-/**/
+/*Sets the header and footer content styles*/
 header section, footer section{
     max-width: var(--max_width);
     height: inherit;
@@ -34,17 +34,17 @@ header section, footer section{
     margin: 0 auto;    
 }
 
-/**/
+/*styles the bullets in the unordered list*/
 ul{
     list-style-type: circle;
 }
 
-/**/
-nav *{
+/*sets transition effects for all children of nav, and the recent projects cards in the main section */
+nav *, main section figure *{
     transition: all .5s;
 }
 
-/**/
+/*sets navigation button styles*/
 nav button {
     font-size: 100%;
     font-family: inherit;    
@@ -54,13 +54,13 @@ nav button {
     padding: 0;
 }
 
-/**/
+/*sets links styles within nav buttons*/
 nav button a {
     text-decoration: none;
     color: antiquewhite;
 }
 
-/**/
+/*sets mobile navigation image styles*/
 nav img {
     display: none;
     opacity: 0.8;
@@ -69,28 +69,28 @@ nav img {
     transition: all .5s;
 }
 
-/**/
+/*sets hover effects for the navigation button*/
 nav button:hover {
     opacity: 0.5;
 }
 
-/**/
+/*sets click behavior for navigation button*/
 nav button:active{
     opacity:0;
 }
 
-/**/
+/*Next two, sets both margin, padding, and pointer attributes to the h1 tag in the header*/
 figure h1{
     margin: 0;
     padding: 0;
 }
 
-/**/
+
 figure h1, nav > *{
     cursor: pointer;
 }
 
-/**/
+/*sets main content section styles*/
 main  {
     flex: 1;
     width: 100%;
@@ -98,20 +98,20 @@ main  {
     margin: 80px auto 0px;
 }
 
-/**/
+/*sets the about my section styles*/
 #aboutme{
     display:flex;
     flex-direction: column;
     justify-content:center;
 }
 
-/**/
+/*sets the h1 styles in about me section*/
 #aboutme h1{
     font-size: xx-large;
     margin: 0 auto;
 }
 
-/**/
+/*sets the image styles in about me section */
 #aboutme img{
     width: 100%;
    height: 100%;
@@ -120,7 +120,7 @@ main  {
 }
 
 
-/**/
+/*sets styles and flec attributes for all the content in main section(recent projects)*/
 main section{
 background-color:antiquewhite;
 color: darkslategray;
@@ -130,7 +130,7 @@ justify-content:flex-start;
 margin: 20px 0;
 }
 
-/**/
+/*sets recent project card styles*/
 main section figure {
     max-width: 250px;
     height:250px;
@@ -140,7 +140,7 @@ main section figure {
     color: antiquewhite;
 } 
 
-/**/
+/*sets the caption for those cards*/
 main section figure figcaption{
     width: 100%;
     height: 60px;
@@ -152,40 +152,38 @@ main section figure figcaption{
     user-select: none;
 }
 
-/**/
+/*allows the most recent project to be larger than the others using flex*/
 .most_recent{
     flex:2 0 250px;
     max-width: 400px;
 }
 
-/**/
-main section figure *{
-    transition: all .5s;
-}
 
-/**/
+
+/*sets positioning of the recent projects cards using flex */
 main section figure img{
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-/**/
+
 main section figure p{
     position: absolute;
     bottom: -20px;
     font-size: 10px;
 }
 
-/**/
+
 main section figure a { 
     margin: 0px; 
     display: block; 
     width: 100%; 
     height: 100%;
     position: absolute;
-    z-index: 3;
 }
+
+/*sets the hover and action effects for the projects cards*/
 main section figure a:hover {
 box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);;
 }
@@ -196,7 +194,7 @@ main section figure a:active{
 }
 
 
-
+/*sets footer background and content sections of the footer*/
 footer  {
     background-color:rgba(24, 24, 24, 0.9) ;
     height: 200px;
@@ -213,26 +211,8 @@ footer section form{
     justify-content: right;
 
 }
-/*
-footer section form >*{
-   
 
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*handles all styles of elements when screen is lower than 826px*/
 @media screen and (max-width: 826px) {
     main section figure, .most_recent {
         max-width: 50%;
@@ -240,6 +220,7 @@ footer section form >*{
     }    
 }
 
+/*handles all styles of elements when screen is lower than 556px*/
 @media screen and (max-width: 556px) {
     nav {
         width: 100%;
